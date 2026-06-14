@@ -4,13 +4,13 @@ BandNorm requires input data in a long-format contact table, where each row repr
 
 To generate this format, the .cool files (produced for each single cell using [0.4_sc_pairs_to_cool.py](https://github.com/Mozhgan0rujlu/scHiC-Energy-Landscape-/blob/main/scripts/preprocessing/0.4_sc_pairs_to_cool.py) were first converted into raw contact tables using the [1.0_cool_to_txt.py](https://github.com/HaghverdiLab/scHiC-Energy-Landscape/blob/main/scripts/scHiC%20normalization/1.0_cool_to_txt.py) script. This script extracts pairwise interactions from each .cool matrix and outputs files in the following format:
 
-`chr1    6    chr1    6    258
-chr1    6    chr1    7    10
-chr1    6    chr1    8    6
-chr1    6    chr1    9    2`
+`chr1    6    chr1    6    258`
+`chr1    6    chr1    7    10`
+`chr1    6    chr1    8    6`
+`chr1    6    chr1    9    2`
 
 Each file corresponds to a single cell and is named according to its barcode.
 
-These raw contact files are then used as input for BandNorm. Normalization is performed by running bandnorm.py, which processes each cell independently and generates normalized contact matrices.
+These raw contact files are then used as input for BandNorm. Normalization is performed by running `1.2_BandNorm.R`, which processes each cell independently and generates normalized contact matrices.
 
 The final output is a directory containing normalized contact files for each single cell, stored as three-column text files. Each file contains normalized interaction values between genomic bins and is used for downstream analyses.
