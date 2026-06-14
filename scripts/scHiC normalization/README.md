@@ -22,6 +22,5 @@ The final output is a directory containing normalized contact files for each sin
 6	7	3.91553584161911
 6	8	2.40181410097148
 6	9	0.687093425567686
-6	50	3.53302174354806
 ```
 Each file contains normalized interaction values between genomic bins and is used for downstream analyses.
