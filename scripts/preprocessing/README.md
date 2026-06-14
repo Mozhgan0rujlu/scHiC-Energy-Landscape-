@@ -2,7 +2,7 @@ Preprocessing Pipeline
 
 This section describes the preprocessing workflow used to generate single-cell and cluster-level Hi-C contact maps from sci-Hi-C data downloaded from *GEO (GSE253407)*.
 
-Two samples were used in this study: *GSM8020244 (LC462)* and *GSM8020245 (LC716)*. Each sample consists of `.sc.pairs.gz` contact files along with valid_bc.txt.gz files containing valid cell barcodes.
+Two samples were used in this study: *GSM8020244 (LC462)* and *GSM8020245 (LC716)*. Each sample consists of `.sc.pairs.gz` contact files along with `valid_bc.txt.gz` files containing valid cell barcodes.
 
 The preprocessing begins by filtering barcodes and restricting contacts to chromosome 1. For each sample, valid barcodes are extracted and used to filter the corresponding pairs file using the script `0.1_filter_valid_bc.py`. This step ensures that only high-quality barcodes and their associated chromosome 1 contacts are retained. The filtering process is applied separately to each dataset.
 
