@@ -15,4 +15,13 @@ Each file corresponds to a single cell and is named according to its barcode.
 
 These raw contact files are then used as input for BandNorm. Normalization is performed by running `1.2_BandNorm.R`, which processes each cell independently and generates normalized contact matrices.
 
-The final output is a directory containing normalized contact files for each single cell, stored as three-column text files. Each file contains normalized interaction values between genomic bins and is used for downstream analyses.
+The final output is a directory containing normalized contact files for each single cell, stored as three-column text files in the following foramt:
+
+```text
+6	6	125.363345837984
+6	7	3.91553584161911
+6	8	2.40181410097148
+6	9	0.687093425567686
+6	50	3.53302174354806
+```
+Each file contains normalized interaction values between genomic bins and is used for downstream analyses.
